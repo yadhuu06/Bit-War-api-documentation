@@ -170,5 +170,4 @@ This project is licensed under MIT License.
 ---
 
 ## 📧 Contact
-For support or inquiries, contact [Your Email].
-
+For support or inquiries, contact [yadhuu.ps@gmail.com].
