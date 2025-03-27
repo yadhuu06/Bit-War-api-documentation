@@ -24,8 +24,11 @@ urlpatterns = [
     path("battle/", include("battle.urls")),
     path("leaderboard/", include("leaderBoard.urls")),
     path("submission/", include("submission.urls")),
+    path("api/", include("store.urls")),
+    path("api/admin/", include("adminpanel.urls")),
 
     # Swagger URLs
     path("swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="swagger-ui"),
     path("redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="redoc-ui"),
+
 ]

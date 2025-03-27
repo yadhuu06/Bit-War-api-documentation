@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     "battle",
     "leaderBoard",
     "submission",
+    "store",
+    "adminpanel",
     "rest_framework",
     "drf_yasg",
 ]

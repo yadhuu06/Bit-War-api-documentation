@@ -49,3 +49,23 @@ class SubmissionHistoryView(APIView):
     def get(self, request, username):
         user_submissions = [s for s in submissions if s["username"] == username]
         return Response({"username": username, "submissions": user_submissions}, status=200)
+
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
+
+class StoreView(APIView):
+    @swagger_auto_schema(
+        operation_summary="Get Available Store Items",
+        responses={200: "List of available reward items"},
+    )
+    def get(self, request):
+        store_items = [
+            {"item_id": 1, "name": "Premium Badge", "points": 500},
+            {"item_id": 2, "name": "Exclusive Avatar", "points": 1000},
+        ]
+        return Response({"items": store_items}, status=200)
+
+
